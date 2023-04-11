@@ -1,0 +1,82 @@
+#left_box
+{
+    -fx-background-color: #133147;
+}
+
+.left_title
+{
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+    -fx-fill: white;
+}
+
+.left_text
+{
+    -fx-text-alignment : center;
+    -fx-wrap-text : true;
+    -fx-font-color : #000000;
+    -fx-fill: white;
+
+}
+
+.right_title
+{
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-fill: #133147;
+
+}
+
+.button
+{
+    -fx-background-color: #133147;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+.label
+{
+     -fx-font-weight: bold;
+     -fx-fill: #133147;
+
+     -fx-padding: 5px;
+         -fx-border-insets: 5px;
+         -fx-background-insets: 5px;
+
+}
+
+.side_button{
+
+    -fx-border-color: transparent;
+    -fx-border-width: 0;
+    -fx-background-radius: 0;
+    -fx-background-color: transparent;
+    -fx-font-size: 1em;
+    -fx-text-fill: white;
+}
+
+
+.side_button:hover{
+       -fx-background-color: #1a3e59;
+}
+
+.side_button:pressed {
+    -fx-background-color: #133147;
+}
+
+.background{
+   -fx-background-color: white;
+
+}
+
+
+
+
+
+.combo-box
+{
+    -fx-background-color: white;
+    -fx-border-color : grey;
+    -fx-border-radius: 3;
+
+}

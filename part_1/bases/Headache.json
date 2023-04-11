@@ -1,0 +1,295 @@
+{
+   "title":"Headache Diagnosis",
+   "but": "headache",
+   "facts":{
+      "intensity of headache":[
+         "10%",
+         "25%",
+         "50%",
+         "75%",
+         "100%"
+      ],
+      "Duration of headache":[
+         "less than an hour",
+         "1 to 2 hours",
+         "2 to 4 hours",
+         "mid day",
+         "all day long"
+      ],
+      "pulsating headache": [
+         "rarely",
+         "often",
+         "sometimes",
+         "always"
+      ],
+      "pressing with headache": [
+         "no",
+         "sometimes",
+         "always"
+      ],
+      "nausea and vomiting with headache": [
+         "no",
+         "sometimes",
+         "always"
+      ],
+      "Do you have body heating with headache": [
+         "no",
+         "sometimes",
+         "always"
+      ],
+      "painful head part": [
+         "one side",
+         "around eye",
+         "forehead",
+         "both sides"
+      ],
+      "what makes headache worsen": [
+         "physical activity",
+         "cold stuff",
+         "time changing",
+         "stress efforts"
+      ]
+
+   },
+   "rules":{
+      "severe tension headache":{
+         "AND": [
+            {
+               "type_operator": "intensity of headache",
+               "operation": "==",
+               "value_operator": "100%"
+            },
+            {
+               "type_operator": "Duration of headache",
+               "operation": "==",
+               "value_operator": "all day long"
+            },
+            {
+               "type_operator": "painful head part",
+               "operation": "==",
+               "value_operator": "both sides"
+            }
+         ],
+         "THEN": {
+            "type_result": "headache",
+            "result": "severe tension headache"
+         }
+      },
+      "migraine":{
+         "AND": [
+            {
+               "type_operator": "intensity of headache",
+               "operation": "==",
+               "value_operator": "75%"
+            },
+            {
+               "type_operator": "pulsating headache",
+               "operation": "==",
+               "value_operator": "sometimes"
+            },
+            {
+               "type_operator": "painful head part",
+               "operation": "==",
+               "value_operator": "one side"
+            }
+         ],
+         "THEN": {
+            "type_result": "headache",
+            "result": "migraine"
+         }
+      },
+      "cluster headache":{
+         "AND": [
+            {
+               "type_operator": "intensity of headache",
+               "operation": "==",
+               "value_operator": "50%"
+            },
+            {
+               "type_operator": "pulsating headache",
+               "operation": "==",
+               "value_operator": "mid day"
+            },
+            {
+               "type_operator": "nausea and vomiting with headache",
+               "operation": "==",
+               "value_operator": "forhead"
+            },
+            {
+               "type_operator": "what makes headache worsen",
+               "operation": "==",
+               "value_operator": "stress efforts"
+            }
+         ],
+         "THEN": {
+            "type_result": "headache",
+            "result": "cluster headache"
+         }
+      },
+      "tension headache":{
+         "AND": [
+            {
+               "type_operator": "intensity of headache",
+               "operation": "==",
+               "value_operator": "25%"
+            },
+            {
+               "type_operator": "pulsating headache",
+               "operation": "==",
+               "value_operator": "often"
+            },
+            {
+               "type_operator": "pulsating headache",
+               "operation": "==",
+               "value_operator": "often"
+            }
+            
+         ],
+         "THEN": {
+            "type_result": "headache",
+            "result": "tension headache"
+         }
+      },
+      "mild migraine with aura":{
+         "AND": [
+            {
+               "type_operator": "intensity of headache",
+               "operation": "==",
+               "value_operator": "10%"
+            },
+            {
+               "type_operator": "pulsating headache",
+               "operation": "==",
+               "value_operator": "sometimes"
+            },
+            {
+               "type_operator": "pressing with headache",
+               "operation": "==",
+               "value_operator": "rarely"
+            },
+            {
+               "type_operator": "what makes headache worsen",
+               "operation": "==",
+               "value_operator": "physical activity"
+            }
+            
+         ],
+         "THEN": {
+            "type_result": "headache",
+            "result": "migraine with aura"
+         }
+      },
+      "Migraine without aura":{
+         "AND": [
+            {
+               "type_operator": "intensity of headache",
+               "operation": "==",
+               "value_operator": "50%"
+            },
+            {
+               "type_operator": "pulsating headache",
+               "operation": "==",
+               "value_operator": "sometimes"
+            },
+            {
+               "type_operator": "pressing with headache",
+               "operation": "==",
+               "value_operator": "always"
+            },
+            {
+               "type_operator": "painful head part",
+               "operation": "==",
+               "value_operator": "one side"
+            },
+            {
+               "type_operator": "body heating with headache",
+               "operation": "==",
+               "value_operator": "always"
+            }
+         ],
+         "THEN": {
+            "type_result": "headache",
+            "result": "Migraine without aura"
+         }
+      },
+      "Hypertension headache":{
+         "AND": [
+            {
+               "type_operator": "intensity of headache",
+               "operation": "==",
+               "value_operator": "100%"
+            },
+            {
+               "type_operator": "pulsating headache",
+               "operation": "==",
+               "value_operator": "always"
+            },
+            {
+               "type_operator": "nausea and vomiting with headache",
+               "operation": "==",
+               "value_operator": "sometimes"
+            },
+            {
+               "type_operator": "body heating with headache",
+               "operation": "==",
+               "value_operator": "sometimes"
+            },
+            {
+               "type_operator": "painful head part",
+               "operation": "==",
+               "value_operator": "around eye"
+            },
+            {
+               "type_operator": "what makes headache worsen",
+               "operation": "==",
+               "value_operator": "time changing"
+            }
+           
+         ],
+         "THEN": {
+            "type_result": "headache",
+            "result": "Hypertension headache"
+         }
+      },
+      "Sinus headache":{
+         "AND": [
+            {
+               "type_operator": "intensity of headache",
+               "operation": "==",
+               "value_operator": "25%"
+            },
+            {
+               "type_operator": "pulsating headache",
+               "operation": "==",
+               "value_operator": "rarely"
+            },
+            {
+               "type_operator": "pressing with headache",
+               "operation": "==",
+               "value_operator": "sometimes"
+            },
+            {
+               "type_operator": "Duration of headache",
+               "operation": "==",
+               "value_operator": "1 to 2 hours"
+            },
+            {
+               "type_operator": "painful head part",
+               "operation": "==",
+               "value_operator": "both sides"
+            },
+            {
+               "type_operator": "what makes headache worsen",
+               "operation": "==",
+               "value_operator": "cold stuff"
+            }
+           
+         ],
+         "THEN": {
+            "type_result": "headache",
+            "result": "Sinus headache"
+         }
+      }
+      
+   }
+}
