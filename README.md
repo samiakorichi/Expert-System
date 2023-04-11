@@ -1,4 +1,4 @@
-This is a university project in agent technology course composed on 2 parts, one implementing an expert system .
+This is a university project of agent technology course implementing an expert system .
 
 # Part 1
 
